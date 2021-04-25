@@ -96,6 +96,8 @@ section {
     background-color: #fce138;
     padding: 20px;
     color: #024e76;
+    width: 40%;
+    margin: 3.5%;
     
 }
 .hero-form h3 {
@@ -159,15 +161,23 @@ section {
 .step h3 {
     color: #024e76;
     font-size: 46px;
+    flex: 1 30%;
 }
 .step-text h4 {
     font-size: 26px;
     line-height: 1.5;
     color: #024e76;
 }
-.steps p {
+.steps-text p{
     color: #39a6b2;
-    font-size: 23px;
+    font-size: 18px;
+}
+.step-img {
+    flex: 1 12%;
+    margin-right: 20px;
+}
+.steps-img img {
+    max-width: 100%;
 }
 .step {
     margin: 50px auto;
@@ -179,7 +189,15 @@ section {
     align-items: center;
     justify-content: space-between;
   }
-
+.step-info {
+    flex: 2 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.step-text {
+    flex: 12;
+}
 /*Trainers style starts */
 .trainers {
     
