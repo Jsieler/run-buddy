@@ -19,8 +19,9 @@ header {
     top: 0; 
     background-image: url("../images/hero-bg.jpg");
     background-size: cover;
-    background-position: 80%;
+    background-position: center;
     background-attachment: fixed;
+    background-position: 80%;
 }
 header h1 {
     font-weight: bold;
@@ -90,6 +91,7 @@ section {
     flex-wrap: wrap;
     align-items: flex-start;
     background-attachment: fixed;
+    background-position: 80%;
 }
 .hero-cta {
     width: 35%;
@@ -132,7 +134,7 @@ section {
     color: #024e76;
     width: 100%;
     margin-bottom: 15px;
-    border-radius: 15px;
+    border-radius: 10px;
     background-color: rgba(255,255,255, 0.75);
 }
 .form-input:focus {
@@ -148,7 +150,7 @@ section {
     border: none;
     padding: 10px 20px;
     font-size: 16px;
-    border-radius: 15px;
+    border-radius: 10px;
     background: #fce138;
     color: #024e76;
     text-shadow: none;
@@ -214,10 +216,12 @@ section {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-  }
-  .step:last-child {
     border-bottom: 1px solid #39a6b2;
   }
+  .step:not(:last-child) {
+    border-bottom: 1px solid #39a6b2;
+  }
+  
 .step-info {
     flex: 2 70%;
     display: flex;
@@ -300,7 +304,7 @@ section {
     flex: 1;
     margin: 15px;
 }
-.contact-form input:focus, .contact-form textarea:focus {
+.contact-form input, .contact-form textarea:focus {
     border: 1px solid #024e76;
     display: block;
     pad: 7px 15px;
@@ -309,10 +313,13 @@ section {
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
-    border-radius: 15px;
+    border-radius: 10px;
     background-color: rgba(255,255,255, 0.75);
 }
-
+.contact-form input:focus, .contact-form textarea:focus {
+  background-color: rgba(255,255,255, 1);
+  outline: none;
+}
 .contact-form button:hover {
     width: 100%;
     border: none;
@@ -321,7 +328,7 @@ section {
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
-    border-radius: 15px;
+    border-radius: 10px;
     color: #fce138;
     background: #39a6b2;
 }
@@ -376,13 +383,8 @@ section {
       .contact-info iframe{
         flex: 1 100%;
       }
-      .step:nth-child(even) {
-        border-bottom: 1px solid #39a6b2;
-      }
-      .step:not(:last-child) {
-        border-bottom: 1px solid #39a6b2;
-      }
-  }
+    }
+  
   @media screen and (max-width: 768px) {
     header h1 {
       /* this will be applied on any screen between 768px and 575px */
@@ -446,5 +448,4 @@ section {
       .contact-form {
         order: 3;
       }
-    }
-  
+  }
