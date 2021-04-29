@@ -370,7 +370,7 @@ section {
   flex: 1;
   margin: 15px;
 }
-.contact-form input, .contact-form textarea:focus {
+.contact-form input, .contact-form textarea {
   border: 1px solid var(--secondary-color);
   display: block;
   pad: 7px 15px;
